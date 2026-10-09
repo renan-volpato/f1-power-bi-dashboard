@@ -27,10 +27,27 @@ O relatório foi organizado em cinco páginas:
 
 ## 🐍 Análise com Python
 
-O projeto inclui scripts para apoiar a análise dos dados:
+O projeto utiliza Python e a biblioteca Pandas para inspecionar os arquivos CSV e realizar verificações iniciais da qualidade dos dados históricos da Fórmula 1.
 
-* `inspect_data.py` — inspeção da estrutura e das características dos dados.
-* `validate_data.py` — verificações de consistência e qualidade dos dados.
+inspect_data.py — Inspeção dos dados
+
+Script responsável por percorrer os arquivos CSV presentes na pasta data/ e apresentar:
+
+Quantidade de registros e colunas de cada arquivo.
+Nomes das colunas disponíveis.
+Primeiro registro de cada conjunto de dados.
+
+Essa etapa ajuda a compreender a estrutura dos arquivos antes de utilizá-los nas análises e visualizações.
+
+validate_data.py — Validação dos dados
+
+Script que realiza verificações sobre os conjuntos de dados utilizados no projeto, incluindo:
+
+Período histórico: identificação do primeiro e do último ano, quantidade de temporadas e quantidade de corridas.
+Verificação de chaves: contagem de registros, IDs únicos e possíveis IDs duplicados nas tabelas de pilotos, construtores, circuitos, corridas, resultados, classificações e status.
+Valores ausentes: identificação de colunas que apresentam valores ausentes nos arquivos analisados.
+
+Essas verificações ajudam a identificar características e possíveis problemas nos dados antes de sua utilização no Power BI.
 
 ## 📁 Estrutura do repositório
 
